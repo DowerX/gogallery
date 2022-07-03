@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  gogallery:
+    image: dowerx/gogallery
+    ports:
+      - "6874:6874"
+    environment:
+      - GALLERYROOT=/gallery
+      - GALLERYPORT=:6874
+      - GALLERYDIRSSTYLE=/gallery-static/dirs.xsl
+      - GALLERYIMAGESSTYLE=/gallery-static/images.xsl
+    volumes:
+      - "/mnt/sdcard/gallery:/gallery"
